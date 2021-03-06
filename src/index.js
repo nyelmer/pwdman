@@ -17,7 +17,6 @@ app.use(express.json());
 
 // Import Routes
 app.use("/auth", require("./routes/authRoutes"));
-app.use("/posts", require("./routes/postRoutes"));
 
 // Start server
 app.listen(process.env.PORT, () => {

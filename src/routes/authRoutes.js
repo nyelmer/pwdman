@@ -21,11 +21,7 @@ router.post("/login", async (req, res) => {
     // Create JWT 
     const token = jwt.sign({ _id: user._id }, process.env.JWT_SECRET);
 
-    // Add JWT to DB
-
-
     // Send JWT back
-
     res.header('auht-token', token).json({ "message": `Logged in as ${user.username}`, 'token': token });
 });
 
@@ -33,7 +29,7 @@ router.post("/register", async (req, res) => {
 
     // Check if user already exists
     let userExists = await User.findOne({ 'username': req.body.username });
-    if (userExists) return res.status(400).json({ "error": "Username taken" });
+    if (userExists) return res.status(400).json({ "error": "Username already taken." });
 
     // Hash the password
     const salt = await bcrypt.genSalt(10);
