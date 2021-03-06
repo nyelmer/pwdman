@@ -1,0 +1,24 @@
+{
+  "name": "auth",
+  "version": "1.0.0",
+  "description": "This is a basic API login register system that can be easily integrated to your own projects. It handles authentication with JWT.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon ./src/index.js"
+  },
+  "author": "nick yelmer",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "helmet": "^4.4.1",
+    "joi": "^17.3.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.11.15"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
