@@ -17,6 +17,7 @@ app.use(express.json());
 
 // Import Routes
 app.use("/auth", require("./routes/authRoutes"));
+app.use("/password", require("./routes/passwordRoutes"));
 
 // Start server
 app.listen(process.env.PORT, () => {

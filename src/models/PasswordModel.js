@@ -1,4 +1,4 @@
-const mongoose = requrie("mongoose");
+const mongoose = require("mongoose");
 
 const PasswordSchema = new mongoose.Schema({
 
